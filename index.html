@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering & Electronics Portfolio</title>
+  <title>Student Engineering & Electronics Portfolio</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -30,14 +30,12 @@
       margin: 0;
     }
 
-    /* Container */
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* Header / Hero Section */
     header {
       padding: 80px 0 40px;
       border-bottom: 1px solid var(--border);
@@ -59,7 +57,7 @@
     }
 
     .hero-bio {
-      max-width: 700px;
+      max-width: 720px;
       color: var(--text-muted);
       font-size: 1.05rem;
       margin-bottom: 24px;
@@ -82,7 +80,6 @@
       font-family: var(--font-mono);
     }
 
-    /* Main Content */
     main {
       padding: 50px 0;
     }
@@ -103,7 +100,6 @@
       padding-left: 12px;
     }
 
-    /* Category Filters */
     .filter-buttons {
       display: flex;
       gap: 8px;
@@ -128,7 +124,6 @@
       font-weight: 600;
     }
 
-    /* Projects Grid */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -208,7 +203,6 @@
       color: #000;
     }
 
-    /* Footer / Contact */
     footer {
       border-top: 1px solid var(--border);
       padding: 50px 0;
@@ -235,7 +229,6 @@
       text-decoration: underline;
     }
 
-    /* Modal Styling */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -327,20 +320,21 @@
   <!-- Header / Hero -->
   <header>
     <div class="container">
-      <h1 class="hero-title">Engineering Portfolio</h1>
-      <p class="hero-subtitle">Biomedical & Hardware Electronics Development</p>
+      <h1 class="hero-title">Engineering Student Portfolio</h1>
+      <p class="hero-subtitle">Biomedical Engineering Technology Student | Hardware & Embedded Systems</p>
       <p class="hero-bio">
-        Specializing in power electronics circuit design, embedded microcontrollers, firmware programming, and hands-on hardware testing and assembly.
+        Welcome to my project showcase! I am a Biomedical Engineering Technology student passionate about circuit design, embedded programming, power electronics, and practical laboratory prototyping. Here are some of the hardware builds, microcontroller programs, and lab projects I've worked on.
       </p>
       <div class="tech-skills">
-        <span class="skill-chip">C / C++</span>
-        <span class="skill-chip">PIC24 & PICmicro</span>
+        <span class="skill-chip">Student Project Showcase</span>
+        <span class="skill-chip">Embedded C</span>
+        <span class="skill-chip">PIC Microcontrollers</span>
         <span class="skill-chip">Arduino</span>
         <span class="skill-chip">MPLAB X IDE</span>
         <span class="skill-chip">Multisim & Ultiboard</span>
         <span class="skill-chip">Power Electronics</span>
-        <span class="skill-chip">PCB Soldering & Rework</span>
-        <span class="skill-chip">Oscilloscopes & Test Bench</span>
+        <span class="skill-chip">Through-Hole Soldering</span>
+        <span class="skill-chip">Lab Benchwork</span>
       </div>
     </div>
   </header>
@@ -348,13 +342,13 @@
   <!-- Main Section -->
   <main class="container">
     <div class="section-header">
-      <h2 class="section-title">Projects Showcase</h2>
+      <h2 class="section-title">Projects & Lab Builds</h2>
       <div class="filter-buttons">
         <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
-        <button class="filter-btn" onclick="filterProjects('power', this)">Power</button>
-        <button class="filter-btn" onclick="filterProjects('test', this)">Test & Measurement</button>
-        <button class="filter-btn" onclick="filterProjects('embedded', this)">Embedded Systems</button>
-        <button class="filter-btn" onclick="filterProjects('robotics', this)">Robotics</button>
+        <button class="filter-btn" onclick="filterProjects('power', this)">Power Supplies</button>
+        <button class="filter-btn" onclick="filterProjects('test', this)">Test & Bench Tools</button>
+        <button class="filter-btn" onclick="filterProjects('embedded', this)">Microcontrollers</button>
+        <button class="filter-btn" onclick="filterProjects('robotics', this)">Robotics & Mentorship</button>
       </div>
     </div>
 
@@ -365,7 +359,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>Designed & Built for Hardware Engineering Showcase</p>
+      <p>Biomedical Engineering Technology Student Portfolio</p>
       <div class="contact-links">
         <a href="mailto:your.email@example.com">Email Me</a>
         <a href="https://linkedin.com" target="_blank">LinkedIn</a>
@@ -382,111 +376,110 @@
       <div class="modal-subtitle" id="modal-category">CATEGORY</div>
       
       <div class="modal-section">
-        <h4>Overview</h4>
+        <h4>Project Overview</h4>
         <p id="modal-desc"></p>
       </div>
 
       <div class="modal-section">
-        <h4>Hardware Specs & Features</h4>
+        <h4>Key Features & Technical Specs</h4>
         <ul id="modal-specs"></ul>
       </div>
 
       <div class="modal-section">
-        <h4>Tools & Techniques</h4>
+        <h4>Tools & Techniques Applied</h4>
         <p id="modal-tools"></p>
       </div>
     </div>
   </div>
 
   <script>
-    // Project Dataset
+    // Student Project Dataset
     const projects = [
       {
         id: "power-supply",
         category: "power",
-        categoryLabel: "Power Electronics",
-        title: "AC-to-DC Regulated Power Supply",
-        summary: "Converts 120V 60Hz wall power into regulated DC outputs with fixed 3V, 5V, 10V outlets and a continuous 0-15V variable potentiometer control.",
-        tags: ["Power Supplies", "AC/DC", "Transformers", "Voltage Regulators", "Potentiometers"],
+        categoryLabel: "Power Electronics Lab Project",
+        title: "AC-to-DC Variable Power Source",
+        summary: "Designed and built an AC-to-DC regulated power supply as a core power electronics project, converting 120V 60Hz wall power into both fixed and adjustable DC voltage outputs.",
+        tags: ["Power Electronics", "120V AC", "Regulated DC", "Potentiometer Control", "Lab Build"],
         specs: [
-          "Input Voltage: 120V AC RMS @ 60Hz mains power.",
-          "Fixed DC Voltage Outlets: Dedicated +3V, +5V, and +10V terminals.",
-          "Variable DC Output: Potentiometer-controlled continuous output from 0V to 15V DC.",
-          "Key Stages: Transformer step-down, full-wave diode bridge rectification, capacitive smoothing filter, and adjustable linear regulation."
+          "Input Voltage: Direct 120V AC RMS @ 60Hz wall plug input.",
+          "Fixed Output Terminals: Three dedicated fixed outlets at 3V, 5V, and 10V DC.",
+          "Variable Output Terminal: Continuous 0V to 15V DC output dialable via potentiometer knob.",
+          "Circuit Design: Step-down transformer stage, full-wave diode bridge rectifier, capacitive filter, and adjustable linear regulation."
         ],
-        tools: "Multisim simulation, Multimeter, Oscilloscope ripple verification, Soldering, Component sourcing."
+        tools: "Multisim simulation, Multimeter, Oscilloscope ripple testing, Soldering, Component testing."
       },
       {
         id: "boost-converter",
         category: "power",
-        categoryLabel: "Power Electronics",
-        title: "5V to 9V Quick Boost Attachment",
-        summary: "Compact adapter module designed to plug directly into the 5V power supply outlet to step up voltage to 9V for operational amplifier experiments.",
-        tags: ["Boost Converter", "Op-Amp Power", "Modular Hardware", "DC-DC"],
+        categoryLabel: "Quick Build / Power Module",
+        title: "5V-to-9V Converter Attachment",
+        summary: "Designed a quick-build booster attachment for the 5V power supply outlet to generate 9V DC needed for operational amplifier experiments in laboratory coursework.",
+        tags: ["Quick Build", "Op-Amp Power", "5V to 9V Step-Up", "Lab Attachment"],
         specs: [
-          "Input: +5V DC from bench power source.",
-          "Output: +9V DC regulated output tailored for operational amplifier power rails.",
-          "Modular Design: Plugs directly into standard 5V banana plug/terminal posts.",
-          "Application: Rapid prototyping in electronic circuit lab setups without requiring dedicated dual-rail bench supplies."
+          "Input: Plugs into the 5V DC outlet of the primary power supply.",
+          "Output: Steps up voltage to 9V DC tailored for powering operational amplifier ICs.",
+          "Practical Application: Provides convenient power rail expansion during analog circuit lab experiments without needing extra bench supplies."
         ],
-        tools: "DC-DC Boost ICs, Inductors, Breadboard verification, Custom PCB prototyping."
+        tools: "DC-DC Step-Up IC, Inductor, Capacitive Filters, Soldering, Breadboard prototyping."
       },
       {
         id: "diy-oscilloscope",
         category: "test",
-        categoryLabel: "Test & Measurement",
-        title: "Portable DIY Digital Oscilloscope",
-        summary: "Assembled and hand-soldered a portable digital storage oscilloscope from component level for portable signal testing and debugging.",
-        tags: ["Oscilloscope", "Signal Analysis", "PCB Assembly", "Testing"],
+        categoryLabel: "Test Equipment / Quick Build",
+        title: "Portable DIY Oscilloscope Build",
+        summary: "Assembled a portable digital oscilloscope by soldering through-hole and surface components onto a purchased PCB to create a personal bench measurement tool.",
+        tags: ["Quick Build", "PCB Soldering", "Oscilloscope", "Signal Testing"],
         specs: [
-          "Functionality: Waveform signal capture, frequency measurement, and peak-to-peak voltage calculation.",
-          "Form Factor: Compact handheld chassis for on-the-go bench debugging.",
-          "Assembly: Component identification, surface/through-hole mounting, display screen header alignment, and rotary encoder installation."
+          "Functionality: Displays AC/DC signals, measures peak-to-peak voltage, and calculates input frequency.",
+          "Hardware Assembly: Hand-soldered IC sockets, passive components, display screen header, and control knobs.",
+          "Purpose: Created a portable personal testing tool for circuit troubleshooting in labs and home projects."
         ],
-        tools: "Precision Soldering Iron, Flux Core Wire, Digital Multimeter calibration, Signal Generator verification."
+        tools: "Temperature-Controlled Soldering Station, Flux, Multimeter continuity checks, Signal Generator."
       },
       {
         id: "soldering-rework",
         category: "test",
-        categoryLabel: "Test & Measurement",
-        title: "PCB Through-Hole Soldering Rework",
-        summary: "Remediated cold solder joints, removed bridges, and reinforced mechanical connections on through-hole printed circuit boards.",
-        tags: ["Soldering Rework", "Quality Assurance", "PCB Maintenance", "Desoldering"],
+        categoryLabel: "Lab Fix & Quality Assurance",
+        title: "Through-Hole Soldering Joint Rework",
+        summary: "Performed PCB maintenance and soldering cleanup on through-hole components to resolve cold joints, remove solder bridges, and ensure reliable physical and electrical connections.",
+        tags: ["Soldering Cleanup", "PCB Maintenance", "Through-Hole", "Lab Techniques"],
         specs: [
-          "Rework Scope: Removed excess oxidation and degraded solder from active circuit pins.",
-          "Reflow & Joint Geometry: Re-soldered joints to form proper concave wetting angles (fillets) for max conductivity and stress relief.",
-          "Inspection: Cleaned residual flux via isopropyl alcohol and performed continuity check across circuit traces."
+          "Defect Resolution: Corrected cold joints and removed excess solder bridging adjacent traces.",
+          "Joint Inspection: Reflowed connections to establish clean concave fillets for physical durability and low contact resistance.",
+          "Board Cleaning: Removed residual flux using isopropyl alcohol and verified continuity with a DMM."
         ],
-        tools: "Desoldering Wick, Vacuum Pump, Soldering Station, Magnification Scope, Isopropyl Alcohol (IPA)."
+        tools: "Desoldering Wick, Solder Sucker, Soldering Iron, Isopropyl Alcohol (IPA), Magnifier, Multimeter."
       },
       {
         id: "pic-alarm",
         category: "embedded",
-        categoryLabel: "Embedded Systems",
-        title: "PIC Microcontroller Security Alarm System",
-        summary: "Embedded alarm module developed on a PIC microcontroller with sensor trigger monitoring, visual indicator LEDs, and piezo buzzer audio alerts.",
-        tags: ["PIC Microcontroller", "MPLAB X IDE", "Embedded C", "GPIO & Timers"],
+        categoryLabel: "Microcontroller Coursework",
+        title: "PIC Microcontroller Alarm Module",
+        summary: "Developed an embedded alarm module programmed in C using MPLAB X IDE on a PIC microcontroller, featuring sensor triggering and audio/visual notifications.",
+        tags: ["PIC Microcontroller", "MPLAB X IDE", "Embedded C", "Microchip"],
         specs: [
-          "Microcontroller: PIC Series Microcontroller running microchip firmware.",
-          "Peripherals: Hardware interrupts for sensor input, PWM / Timer-driven sound generation for audio warnings.",
-          "State Machine Design: Written in C using MPLAB X IDE with efficient power state handling."
+          "Hardware: PIC microcontroller interfacing with digital sensors, status LEDs, and a piezo buzzer.",
+          "Firmware Logic: Programmed interrupt routines and timers in C to manage system state and alarm triggers.",
+          "Development Environment: Written, compiled, and debugged inside MPLAB X IDE."
         ],
-        tools: "MPLAB X IDE, XC Compiler, PICkit Programmer, Oscilloscope signal analysis."
+        tools: "MPLAB X IDE, XC Compiler, Microchip PIC Programmer, Breadboard prototyping, Logic/Voltage testing."
       },
       {
         id: "line-robot",
         category: "robotics",
-        categoryLabel: "Robotics",
-        title: "Autonomous Line-Following Robot (GirlCode)",
-        summary: "Guided and built an autonomous robot utilizing ultrasonic sensors, servo motors, and wireless communication as a technical mentor for GirlCode.",
-        tags: ["Arduino", "Ultrasonic Sensors", "Servos", "Wi-Fi & Bluetooth", "Mentorship"],
+        categoryLabel: "Robotics & Mentorship",
+        title: "Line-Following Robot (GirlCode Competition)",
+        summary: "Served as a student mentor in the GirlCode robotics competition, guiding participants and helping construct an autonomous line-following robot with obstacle detection.",
+        tags: ["Arduino", "Sensors", "Servos", "Wi-Fi & Bluetooth", "Mentorship"],
         specs: [
-          "Core Control: Arduino board managing sensor telemetry and differential steering.",
-          "Navigation & Obstacles: Infra-Red line-tracking sensor array paired with an Ultrasonic sensor for object detection.",
-          "Wireless Control: Integrated Bluetooth/Wi-Fi modules for remote status telemetry and manual overrides.",
-          "Leadership: Mentored participants in circuit wiring, microcontroller coding, and mechanical assembly."
+          "Microcontroller & Sensors: Arduino micro-controller, IR line-tracking module, and ultrasonic distance sensor.",
+          "Actuators & Steering: Servo motors configured for precise differential steerage.",
+          "Wireless Communication: Integrated Bluetooth and Wi-Fi modules for telemetry monitoring.",
+          "Mentorship: Guided team members through wiring, sensor calibration, and microcontroller programming."
         ],
-        tools: "Arduino IDE, IR Arrays, Ultrasonic Transceivers, Bluetooth HC-05, Servo Motor Controls."
+        tools: "Arduino IDE, C/C++, Ultrasonic Sensors, HC-05 Bluetooth, Servo Motors, Team Mentorship."
       }
     ];
 
